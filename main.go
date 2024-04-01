@@ -7,7 +7,13 @@ import (
 
 func main() {
 	if len(os.Args) < 2 {
-		fmt.Println("No arguments provided")
+		// fmt.Println("No arguments provided")
+		file := file_picker()
+		if file == "" {
+			fmt.Println("No file selected")
+			return
+		}
+		CreateServer(file)
 		return
 	}
 	if os.Args[1] == "send" {
