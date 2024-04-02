@@ -6,8 +6,10 @@ import (
 )
 
 func main() {
+
 	if len(os.Args) < 2 {
-		// fmt.Println("No arguments provided")
+		// Show home menu
+
 		file := file_picker()
 		if file == "" {
 			fmt.Println("No file selected")
