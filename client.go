@@ -14,6 +14,7 @@ func createClient(server_address string) {
 		fmt.Println("Error connecting to server:", err)
 		return
 	}
+	fmt.Printf("Connected to server at %s\n", server_address)
 	defer conn.Close()
 
 	// Create a buffer to store received data
